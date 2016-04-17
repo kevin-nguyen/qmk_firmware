@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BACKLIGHT_LEVELS 3
 
 /* Set 0 if debouncing isn't needed */
-#define DEBOUNCE    5
+#define DEBOUNCE    10
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -59,10 +59,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 )
 
 /* ws2812 RGB LED */
-#define ws2812_PORTREG  PORTD
-#define ws2812_DDRREG   DDRD
-#define ws2812_pin PD1
-#define RGBLED_NUM 28     // Number of LEDs
+#define ws2812_PORTREG  PORTB
+#define ws2812_DDRREG   DDRB
+#define ws2812_pin PB1
+#define RGBLED_NUM 17    // Number of LEDs
 #define RGBLIGHT_HUE_STEP 10
 #define RGBLIGHT_SAT_STEP 17
 #define RGBLIGHT_VAL_STEP 17
@@ -84,5 +84,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_ONESHOT
 //#define NO_ACTION_MACRO
 //#define NO_ACTION_FUNCTION
+
+
+/* Number of taps to toggle a key on */
+#define TAPPING_TOGGLE	2
 
 #endif
