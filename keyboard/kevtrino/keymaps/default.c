@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const uint16_t PROGMEM fn_actions[] = {
   [0]  = ACTION_LAYER_TAP_TOGGLE(_FN),
-  [1]  = LT(_RS, KC_TAB),
+  [1]  = ACTION_LAYER_TAP_KEY(_RS, KC_TAB)
 };
 
 const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
