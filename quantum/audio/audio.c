@@ -6,7 +6,7 @@
 #include <avr/io.h>
 #include "print.h"
 #include "audio.h"
-#include "keymap_common.h"
+#include "keymap.h"
 
 #include "eeconfig.h"
 
@@ -475,20 +475,3 @@ void increase_tempo(uint8_t tempo_change) {
         note_tempo -= tempo_change;
     }
 }
-
-
-//------------------------------------------------------------------------------
-// Override these functions in your keymap file to play different tunes on
-// startup and bootloader jump
-__attribute__ ((weak))
-void play_startup_tone() {}
-
-__attribute__ ((weak))
-void play_goodbye_tone() {}
-
-__attribute__ ((weak))
-void audio_on_user() {}
-
-__attribute__ ((weak))
-void play_music_scale() {}
-//------------------------------------------------------------------------------
