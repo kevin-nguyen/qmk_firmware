@@ -538,4 +538,40 @@ void rgblight_effect_knight(uint8_t interval) {
   }
 }
 
+void rgblight_setrgb_indicator_layer(uint8_t r, uint8_t g, uint8_t b) {
+  // dprintf("rgblight set rgb: %u,%u,%u\n", r,g,b);
+  for (uint8_t i = 0; i < RGBLED_NUM; i++) {
+    led[i].r = r;
+    led[i].g = g;
+    led[i].b = b;
+  }
+    led[7].r = 52;
+    led[7].g = 246;
+    led[7].b = 242;
+  rgblight_set();
+}
+
+void rgblight_setrgb_indicator_mute(uint8_t r, uint8_t g, uint8_t b) {
+  // dprintf("rgblight set rgb: %u,%u,%u\n", r,g,b);
+  for (uint8_t i = 0; i < RGBLED_NUM; i++) {
+    led[i].r = 0;
+    led[i].g = 0;
+    led[i].b = 0;
+  }
+    led[5].r = 0;
+    led[5].g = 255;
+    led[5].b = 0;
+  //rgblight_set();
+}
+
+void rgblight_setrgb_indicator(uint8_t r, uint8_t g, uint8_t b) {
+  // dprintf("rgblight set rgb: %u,%u,%u\n", r,g,b);
+  for (uint8_t i = 0; i < RGBLED_NUM; i++) {
+    led[i].r = r;
+    led[i].g = g;
+    led[i].b = b;
+  }
+  rgblight_set();
+}
+
 #endif

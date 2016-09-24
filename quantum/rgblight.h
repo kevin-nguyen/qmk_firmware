@@ -86,4 +86,9 @@ void rgblight_effect_rainbow_swirl(uint8_t interval);
 void rgblight_effect_snake(uint8_t interval);
 void rgblight_effect_knight(uint8_t interval);
 
+void rgblight_setrgb_indicator_layer(uint8_t r, uint8_t g, uint8_t b);
+void rgblight_setrgb_indicator_mute(uint8_t r, uint8_t g, uint8_t b);
+void rgblight_setrgb_indicator(uint8_t r, uint8_t g, uint8_t b);
+
+
 #endif
